@@ -13,6 +13,11 @@
 		BC7ECD63282A186A00003EAA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC7ECD62282A186A00003EAA /* Preview Assets.xcassets */; };
 		BC7ECD65282A186A00003EAA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7ECD64282A186A00003EAA /* Persistence.swift */; };
 		BC7ECD68282A186A00003EAA /* Less_is_More.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BC7ECD66282A186A00003EAA /* Less_is_More.xcdatamodeld */; };
+		BC7ECD71282A18F600003EAA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7ECD70282A18F600003EAA /* CloudKit.framework */; };
+		BC7ECD74282A1B9C00003EAA /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7ECD73282A1B9C00003EAA /* AddItemView.swift */; };
+		BCC8E000282A3DFD00AD4F0B /* CloudKitSyncMonitor in Frameworks */ = {isa = PBXBuildFile; productRef = BCC8DFFF282A3DFD00AD4F0B /* CloudKitSyncMonitor */; };
+		BCC8E002282A3E2800AD4F0B /* SyncStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E001282A3E2800AD4F0B /* SyncStatusView.swift */; };
+		BCC8E004282A416200AD4F0B /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC8E003282A416200AD4F0B /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,12 @@
 		BC7ECD62282A186A00003EAA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BC7ECD64282A186A00003EAA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BC7ECD67282A186A00003EAA /* Less_is_More.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Less_is_More.xcdatamodel; sourceTree = "<group>"; };
+		BC7ECD6E282A18E000003EAA /* Less is More.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Less is More.entitlements"; sourceTree = "<group>"; };
+		BC7ECD70282A18F600003EAA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		BC7ECD72282A192800003EAA /* Less-is-More-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Less-is-More-Info.plist"; sourceTree = SOURCE_ROOT; };
+		BC7ECD73282A1B9C00003EAA /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		BCC8E001282A3E2800AD4F0B /* SyncStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncStatusView.swift; sourceTree = "<group>"; };
+		BCC8E003282A416200AD4F0B /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC7ECD71282A18F600003EAA /* CloudKit.framework in Frameworks */,
+				BCC8E000282A3DFD00AD4F0B /* CloudKitSyncMonitor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +54,7 @@
 			children = (
 				BC7ECD5A282A186900003EAA /* Less is More */,
 				BC7ECD59282A186900003EAA /* Products */,
+				BC7ECD6F282A18F600003EAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,8 +69,13 @@
 		BC7ECD5A282A186900003EAA /* Less is More */ = {
 			isa = PBXGroup;
 			children = (
+				BC7ECD72282A192800003EAA /* Less-is-More-Info.plist */,
+				BC7ECD6E282A18E000003EAA /* Less is More.entitlements */,
 				BC7ECD5B282A186900003EAA /* Less_is_MoreApp.swift */,
 				BC7ECD5D282A186900003EAA /* ContentView.swift */,
+				BCC8E003282A416200AD4F0B /* ItemView.swift */,
+				BC7ECD73282A1B9C00003EAA /* AddItemView.swift */,
+				BCC8E001282A3E2800AD4F0B /* SyncStatusView.swift */,
 				BC7ECD5F282A186A00003EAA /* Assets.xcassets */,
 				BC7ECD64282A186A00003EAA /* Persistence.swift */,
 				BC7ECD66282A186A00003EAA /* Less_is_More.xcdatamodeld */,
@@ -71,6 +90,14 @@
 				BC7ECD62282A186A00003EAA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BC7ECD6F282A18F600003EAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC7ECD70282A18F600003EAA /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +116,9 @@
 			dependencies = (
 			);
 			name = "Less is More";
+			packageProductDependencies = (
+				BCC8DFFF282A3DFD00AD4F0B /* CloudKitSyncMonitor */,
+			);
 			productName = "Less is More";
 			productReference = BC7ECD58282A186900003EAA /* Less is More.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +147,9 @@
 				Base,
 			);
 			mainGroup = BC7ECD4F282A186900003EAA;
+			packageReferences = (
+				BCC8DFFE282A3DFD00AD4F0B /* XCRemoteSwiftPackageReference "CloudKitSyncMonitor" */,
+			);
 			productRefGroup = BC7ECD59282A186900003EAA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC7ECD65282A186A00003EAA /* Persistence.swift in Sources */,
+				BCC8E002282A3E2800AD4F0B /* SyncStatusView.swift in Sources */,
 				BC7ECD68282A186A00003EAA /* Less_is_More.xcdatamodeld in Sources */,
 				BC7ECD5E282A186900003EAA /* ContentView.swift in Sources */,
+				BCC8E004282A416200AD4F0B /* ItemView.swift in Sources */,
 				BC7ECD5C282A186900003EAA /* Less_is_MoreApp.swift in Sources */,
+				BC7ECD74282A1B9C00003EAA /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,17 +308,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Less is More/Less is More.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Less is More/Preview Content\"";
 				DEVELOPMENT_TEAM = 2DTPJ248VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Less-is-More-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,6 +329,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Less-is-More";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -301,17 +341,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Less is More/Less is More.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Less is More/Preview Content\"";
 				DEVELOPMENT_TEAM = 2DTPJ248VT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Less-is-More-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,6 +362,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.demo.Less-is-More";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,6 +391,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BCC8DFFE282A3DFD00AD4F0B /* XCRemoteSwiftPackageReference "CloudKitSyncMonitor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ggruen/CloudKitSyncMonitor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BCC8DFFF282A3DFD00AD4F0B /* CloudKitSyncMonitor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BCC8DFFE282A3DFD00AD4F0B /* XCRemoteSwiftPackageReference "CloudKitSyncMonitor" */;
+			productName = CloudKitSyncMonitor;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BC7ECD66282A186A00003EAA /* Less_is_More.xcdatamodeld */ = {
